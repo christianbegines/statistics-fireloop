@@ -1,0 +1,11 @@
+{
+  "generator-fireloop": {
+    "version": "1.0.0-beta.1.3",
+    "clients": {
+      "WebStatistics": {
+        "path": "./WebStatistics",
+        "type": "ng2web"
+      }
+    }
+  }
+}

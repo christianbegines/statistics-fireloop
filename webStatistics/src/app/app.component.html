@@ -1,0 +1,28 @@
+<h1>
+  {{title}}
+</h1>
+<form (submit)="create()">
+  <input name="statistics" type="text" [(ngModel)]="statistics.text" placeholder="Add Todo" />
+  <input name="statistics" type="date" [(ngModel)]="statistics.dueAt" placeholder="Due Date" />
+  <button>Add Todo</button>
+</form>
+<ul *ngIf="statisticsRef" >
+  <li *ngFor="let _statistics of statisticss">
+    <input name="_statistics.id" [(ngModel)]="_statistics.text" />
+    <button (click)="update(_statistics)">Update</button>
+    <button (click)="remove(_statistics)">Remove</button>
+  </li>
+</ul>
+<div class="row">
+  <div class="col-md-6">
+    <div style="display: block;">
+    <canvas *ngIf="lineChartData.length > 0" baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"></canvas>
+    </div>
+  </div>
+</div>
